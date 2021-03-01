@@ -1,0 +1,18 @@
+{% extends 'posts/main.html' %}
+
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 card mb-4  mt-3 left  top">
+            <div class="card-body">
+                <h5 class="card-title">{{post.title}}</h5>
+                <p class="text-muted">{{post.created_by}} | {{post.created_at}}</p>
+                <img class="card-img-top" src="https://picsum.photos/600/200" alt="Card image cap">
+                <p class="card-text mt-2">{{ post.content}}</p>
+            </div>
+        </div>
+    </div>
+    {% include 'posts/comments.html' %}
+</div>
+{% endblock content %}

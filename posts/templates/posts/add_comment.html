@@ -1,0 +1,12 @@
+{% extends 'posts/main.html' %}
+
+
+{% block content %}
+<div class="form-group">
+    <form method="POST" action="" class="mt-5">
+        {% csrf_token %}
+        {{form}}
+        <button type="submit" class="btn btn-primary mt-2">Submit</button>
+    </form>
+</div>
+{% endblock content %}
